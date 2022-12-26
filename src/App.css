@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Amaranth&family=Montserrat&family=Qwitcher+Grypen:wght@700&family=Satisfy&family=Tiro+Kannada:ital@1&display=swap');
+
+ *{
+  margin: 0;
+  padding: 0;
+ }
+
+body{
+  background-image: linear-gradient( to right, #DECBA4, #3E5151);
+}
+
+body::-webkit-scrollbar {
+    width: 1em;
+    border-radius: 5px;
+  }
+   
+  body::-webkit-scrollbar-track {
+   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+   
+  body::-webkit-scrollbar-thumb {
+    
+    background-color: #DECBA4;
+    outline: 1px solid #3E5151;
+  }
+
+
+.nav--bar{
+  flex-shrink: 1;
+  flex-grow: 1;
+   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  flex-basis: 100%;
+  height: 10vh;
+}
+
+.name-logo{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    width: 20px; 
+    margin-left: 5px;
+}
+
+
+
+ .logo{
+  font-family: 'Abel', sans-serif;
+  background-color: #19547b ;
+   padding: 5px;
+font-size: 18px;
+   font-weight: bolder;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+   border-radius: 10px;
+   margin-left: 2px;
+   margin-top: 10px;
+ }
+
+#o{
+  background-color: #ffd89b;
+}
+
+
+
+.note {
+  text-align: center;
+  vertical-align: center;
+  line-height: 25vh;
+  font-family: 'Satisfy', cursive;
+  color: #333;
+  font-size: 25px;
+}
+
+.container {
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+.input-field{
+  padding: 15px;
+  text-align: center;
+  vertical-align: center;
+  background-color: #eee2c8;
+  display: flex;
+  align-items: center;
+  width: 40%;
+  margin: 20px auto;
+  outline: none;
+  border-radius: 10px;
+ 
+}
+
+
+
+.button{
+  text-decoration: none;
+  color: white;
+  font-size:16px;
+  font-family: 'Montserrat', sans-serif;
+   padding: 10px;
+  background-color: #3E5151;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+
+
+.button:hover{
+  background-color: #657b7b;
+  }
+
+
+
+ .input-field {
+    padding: 30px 40px;
+    margin-bottom: 15px;
+    border: 1px solid #333;
+    cursor: pointer;
+}
+
+
+.input-field::placeholder {
+    font-size: 14px;
+    font-family: 'Amaranth', sans-serif;
+}    
+
+.screen{
+   padding: 30px;
+  text-align: right;
+  background-color:grey;
+  font-size: 25px;
+  color: #333;
+  font-weight: 350px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  width: 30%;
+  margin: 20px auto;
+}
+                                    
