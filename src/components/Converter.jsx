@@ -53,8 +53,7 @@ export default function Converter(){
               >Convert</button>
 
             <div className="screen">
-              <input>
-              </input>
+             
             </div>
 
         </div>
