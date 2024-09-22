@@ -1,33 +1,46 @@
 import React from "react";
-// import {useRef, useState, useEffect} from "react";
+import { useState, useEffect} from "react";
 
 export default function Converter(){
 
-  // const [initialState, setInitialState] = useState({
-  //   input: "",
-  //   output: "",
-  // });
+   const [initialState, setInitialState] = useState({
+     input: "",
+     output: "",
+   });
 
-  // const{input, output} = initialState
+   const{input, output} = initialState
  
-  
-  // useEffect(() => {  
     
-  //   function alphabetToDigits(input){                        
+     function alphabetToDigits(text){                        
+       let result = "";
+       for(let i = 0; i < text.length; i++){
+         var code = text.charCodeAt(i)
+         if(code > 64 && code < 91){
+           result += (code-64) + ""
+         }else if(code > 96 && code < 123){
+           result += (code - 96) + ""
+           }else{
+            result += ""
+          }
+       }
+       setInitialState((prev) => ({
+        ...prev,
+        output: result.trim(),
+      }))
+      }
+   
 
-  //     for(let i = 0; i < input.length; i++){
-  //       var code = input.charcodeAt(i)
-  //       if(code > 64 && code < 91){
-  //         output += (code-64) + ""
-  //       }else if(code > 96 && code < 123){
-  //         output += (code - 96) + ""
-  //         }else{output += ""}
-  //     }
-  //     return output.slice(0, output.length - 1)
-  //    }
-  // }, [])
+   const handleChange = (e) => {
+    let newInput = e.target.value;    
+    setInitialState((prev) => ({
+      ...prev,
+      input: newInput
+    }))
+   }
 
-
+  const handleButtonClick = () =>{
+    alphabetToDigits(input)
+  }
 
     return(
         <main>
@@ -40,20 +53,20 @@ export default function Converter(){
             <input 
               // ref={inputRef}
               className="input-field"
-              placeholder="Enter a letter, word or sentence"
+              placeholder="Enter an alphabet letter"
               autoComplete="off"
               type="text"
-              // value={text}
-              // onChange={alphabetToDigits()}
+              value={input}
+              onChange={handleChange}
               ></input>
 
             <button 
               className="button" 
-             // onClick={alphabetToDigits()}
+             onClick={handleButtonClick}
               >Convert</button>
 
             <div className="screen">
-             
+             {output && <p className="screen-text">{output}</p>}
             </div>
 
         </div>
